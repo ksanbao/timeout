@@ -1,22 +1,22 @@
-## Introduction：
+## Introduction
 
 This is a TTL callback server.
 
 
 Typical application scenarios are heartbeat alert and delayed callback jobs.
 
-## TTL Server Address：
+## TTL Server Address
 Listen :2212
 
-## Protocol：
+## Protocol
 HTTP POST
 
-## TTL Callback API：
+## TTL Callback API
 
 - /setTimeout：create/update TTL callback
 - /clearTimeout：destroy TTL callback
 
-## TTL API Description:
+## TTL API Description
 ### setTimeout
 ```json
 {
@@ -32,11 +32,19 @@ HTTP POST
 ```
 
 RESPONSE:
+
+
 request params fine >> HTTP 200
+
+
 request params bad >> HTTP 400
+
+
 service is exiting >> HTTP 502
 
-#### Callabck Format Table:
+
+#### Callabck Format Table
+| Input | Callback |
 | arrayMode=false and data=null | http.GET(backURL) |
 | --- | --- |
 | arrayMode=false and data≠null | http.POST(backURL, data) |
@@ -52,6 +60,12 @@ service is exiting >> HTTP 502
 ```
 
 RESPONSE:
+
+
 request params fine >> HTTP 200
+
+
 request params bad >> HTTP 400
+
+
 service is exiting >> HTTP 502
