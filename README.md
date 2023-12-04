@@ -31,16 +31,16 @@ HTTP POST
 |  |  |  |
 
 
-RESPONSE:
+**RESPONSE**
 
 
-request params fine >> HTTP 200
+request params fine: HTTP 200
 
 
-request params bad >> HTTP 400
+request params bad: HTTP 400
 
 
-service is exiting >> HTTP 502
+service is exiting: HTTP 502
 
 
 #### Callabck Format Table
@@ -58,13 +58,13 @@ service is exiting >> HTTP 502
 | name | string | the name, non-empty, case-sensitive |
 |  |  |  |
 
-RESPONSE:
+**RESPONSE**
 
 
-request params fine >> HTTP 200
+request params fine: HTTP 200
 
 
-request params bad >> HTTP 400
+request params bad: HTTP 400
 
 
-service is exiting >> HTTP 502
+service is exiting: HTTP 502
