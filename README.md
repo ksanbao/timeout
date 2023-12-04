@@ -44,9 +44,7 @@ service is exiting >> HTTP 502
 
 
 #### Callabck Format Table
-| Input | Callback |
 | arrayMode=false and data=null | http.GET(backURL) |
-| --- | --- |
 | arrayMode=false and data≠null | http.POST(backURL, data) |
 | arrayMode=true | http.POST(backURL, [data1, data2, ...] |
 |  |  |
