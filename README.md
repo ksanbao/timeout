@@ -18,18 +18,18 @@ HTTP POST
 
 ## TTL API Description
 ### setTimeout
-```json
-{
-  name: "xxx", // string, the name, non-empty, case-sensitive
-  ttl: 10, // number, TTL time value (seconds)
-  expiredTime: 0, // number, TTL timestamp, default 0; format as javascript Date.now(), priority over 'ttl'
-  backURL: "http(s)://xxx", // string, callback URL，backURL="false" means calling nothing
-  data: any, // callback params, default null; arrayMode=false and data=null USE 'GET'，otherwise USE 'POST'
-  oncreate: null | { data: any }, // if oncreate has data and TTL object is being created, callback with ocreate.data
-  arrayMode: false, // boolean, callback with array, default false
-  arrayLimit: 0, // number, if arrayMode is true, limit the maximum number, default 100.
-}
-```
+| Field | Type | Description |
+| --- | --- | --- |
+| name | string | an unique name, non-empty, case-sensitive |
+| ttl | number | TTL time value (seconds) |
+| expiredTime | number | TTL timestamp, default 0; format as javascript Date.now(), priority over 'ttl' |
+| backURL | string | callback URL，backURL="false" means calling nothing |
+| data | any | callback params, default null |
+| oncreate | null or {data: any} | if not null and TTL object is being created, callback with ocreate.data |
+| arrayMode | boolean | callback with array, default false |
+| arrayLimit | number | if arrayMode is true, limit the maximum number, default 100 |
+|  |  |  |
+
 
 RESPONSE:
 
@@ -53,11 +53,10 @@ service is exiting >> HTTP 502
 
 
 ### clearTimeout
-```json
-{
-  name: "xxx" // string, the name
-}
-```
+| Field | Type | Description |
+| --- | --- | --- |
+| name | string | the name, non-empty, case-sensitive |
+|  |  |  |
 
 RESPONSE:
 
